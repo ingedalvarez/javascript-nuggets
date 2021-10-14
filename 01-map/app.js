@@ -1,5 +1,5 @@
 // MAP Method
-const people = [
+/* const people = [
   {
     name: 'bob',
     age: 20,
@@ -43,3 +43,18 @@ const names = people.map((person) => `<h2>${person.name}</h2>`);
 const result = document.querySelector('#result');
 
 result.innerHTML = names.join('');
+ */
+
+const people = [
+  { name: 'Edward', age: 43, possition: 'developer' },
+  { name: 'Freddy', age: 40, possition: 'developer' },
+  { name: 'Patricia', age: 36, possition: 'designer' },
+  { name: 'Johan', age: 46, possition: 'manager' },
+  { name: 'Isabella', age: 2, possition: 'CEO' },
+];
+
+const ages = people.map((person) => {
+  console.log(person);
+  return console.log('hello world');
+});
+console.log(ages);
