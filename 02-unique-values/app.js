@@ -54,6 +54,8 @@ console.log(categories);
 //seleccionamos la class .result del div donde queremos agregar los valores.
 
 const result = document.querySelector('.result');
+
+//insertamos via JS los elementos dentro del documento html.
 result.innerHTML = categories
   .map((category) => {
     return `<button>${category}</button>`;
