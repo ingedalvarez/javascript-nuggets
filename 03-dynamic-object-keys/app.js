@@ -33,6 +33,7 @@ console.log(person['name']);
 
 let appState = 'loading';
 appState = 'error';
+
 const app = {
   [appState]: true,
 };
@@ -54,3 +55,5 @@ function updateState(key, value) {
 
 updateState('name', 'Euripides');
 console.log(state);
+
+updateState('job', 'housekeeper');
