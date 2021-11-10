@@ -27,3 +27,10 @@ let second = 'john';
 [second, first] = [first, second];
 
 console.log(first, second);
+
+const prime = [2, 3, 5, 7, 11, 13];
+const first1 = prime[0];
+console.log(first1);
+
+const [primero, segundo, tercero, cuarto] = prime;
+console.log(tercero);

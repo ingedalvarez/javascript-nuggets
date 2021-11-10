@@ -57,3 +57,4 @@ updateState('name', 'Euripides');
 console.log(state);
 
 updateState('job', 'housekeeper');
+console.log(state);
