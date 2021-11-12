@@ -35,3 +35,31 @@ const getAverage = (name, ...scores) => {
 const testScores = [67, 78, 99, 100];
 
 getAverage(person.name, ...testScores);
+
+// Arrays
+
+const frutas = ['mandarina', 'naranja', 'pera', 'manzana', 'uvas'];
+const [primera, segunda, ...restoFrutas] = frutas;
+console.log(segunda);
+console.log(primera, restoFrutas);
+
+// Objects
+
+const animal = { genero: 'mamifero', tamano: 'pequeño', habitat: 'selva' };
+const { tamano, ...restAnimal } = animal;
+console.log(tamano);
+console.log(tamano, restAnimal);
+
+//function
+
+const promedioBateo = (nombre, ...hit) => {
+  console.log(nombre);
+  console.log(hit);
+  const promedio =
+    hit.reduce((total, item) => {
+      return (total += item);
+    }, 0) / hit.length;
+  console.log(promedio);
+};
+
+promedioBateo('edward', 10, 9, 5, 15, 8);
