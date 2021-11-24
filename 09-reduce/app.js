@@ -21,3 +21,45 @@ const dailyTotal = staff.reduce((total, person) => {
 }, 0);
 
 console.log(dailyTotal);
+
+const employees = [
+  {
+    name: 'Paki Zimmerman',
+    salary: 13,
+    position: 'senior_developer',
+    age: 55,
+  },
+  {
+    name: 'Keefe Crosby',
+    salary: 16,
+    position: 'practicante',
+    age: 53,
+  },
+  {
+    name: 'Armand Cox',
+    salary: 17,
+    position: 'CEO',
+    age: 57,
+  },
+  {
+    name: 'Brenna Joseph',
+    salary: 19,
+    position: 'senior_developer',
+    age: 50,
+  },
+  {
+    name: 'Regina Langley',
+    salary: 15,
+    position: 'CEO',
+    age: 48,
+  },
+];
+
+const diarioTotal = employees.reduce((acc, curr) => {
+  console.log(acc);
+  console.log(curr.salary);
+  acc += curr.salary;
+  return acc;
+}, 0);
+
+console.log(diarioTotal);
