@@ -65,10 +65,10 @@ const nominaDiaria = employees.reduce((acc, curr) => {
 console.log(nominaDiaria);
 
 const avgAge = employees.reduce((acc, curr) => {
-  let suma = 0;
   console.log(acc);
   console.log(curr.age);
-  suma += curr.age;
-  console.log(suma);
-  return acc / employees.length;
+  acc += curr.age / employees.length;
+  return acc;
 }, 0);
+
+console.log(avgAge);

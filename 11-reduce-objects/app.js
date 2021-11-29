@@ -21,34 +21,34 @@ const cart = [
     price: 399.99,
     amount: 3,
   },
-]
+];
 
 let { totalItems, cartTotal } = cart.reduce(
   (total, cartItem) => {
-    const { amount, price } = cartItem
+    const { amount, price } = cartItem;
     // count items
-    total.totalItems += amount
+    total.totalItems += amount;
     // count sum
-    total.cartTotal += amount * price
-    return total
+    total.cartTotal += amount * price;
+    return total;
   },
   {
     totalItems: 0,
     cartTotal: 0,
   }
-)
-cartTotal = parseFloat(cartTotal.toFixed(2))
+);
+cartTotal = parseFloat(cartTotal.toFixed(2));
 // console.log(total)
-console.log(totalItems, cartTotal)
+console.log(totalItems, cartTotal);
 // github repos example
 
-const url = 'https://api.github.com/users/john-smilga/repos?per_page=100'
+const url = 'https://api.github.com/users/john-smilga/repos?per_page=100';
 
 const fetchRepos = async () => {
-  const response = await fetch(url)
-  const data = await response.json()
+  const response = await fetch(url);
+  const data = await response.json();
   const newData = data.reduce((total, repo) => {
-    const { language } = repo
+    const { language } = repo;
     // if (language) {
     //   if (total[language]) {
     //     total[language] = total[language] + 1
@@ -57,11 +57,53 @@ const fetchRepos = async () => {
     //   }
     // }
     if (language) {
-      total[language] = total[language] + 1 || 1
+      total[language] = total[language] + 1 || 1;
     }
-    return total
-  }, {})
-  console.log(newData)
-}
+    return total;
+  }, {});
+  console.log(newData);
+};
 
-fetchRepos()
+fetchRepos();
+
+// nuevo ejemplo reduce object nov 2021
+
+const fruit = [
+  {
+    name: 'pinapple',
+    price: 3,
+    cant: 1,
+  },
+  {
+    name: 'watermelon',
+    price: 5,
+    cant: 2,
+  },
+  {
+    name: 'banana',
+    price: 5,
+    cant: 1,
+  },
+  {
+    name: 'apple',
+    price: 4,
+    cant: 1,
+  },
+  {
+    name: 'orange',
+    price: 5,
+    cant: 2,
+  },
+];
+
+let { totalItems2, cartTotal2 } = fruit.reduce(
+  (acc, curr) => {
+    const { price, cant } = curr;
+    acc.totalItems2 += cant;
+    acc.cartTotal2 += price * cant;
+    return acc;
+  },
+  { totalItems2: 0, cartTotal2: 0 }
+);
+
+console.log(totalItems2, cartTotal2);
