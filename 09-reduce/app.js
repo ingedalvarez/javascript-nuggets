@@ -55,11 +55,20 @@ const employees = [
   },
 ];
 
-const diarioTotal = employees.reduce((acc, curr) => {
+const nominaDiaria = employees.reduce((acc, curr) => {
   console.log(acc);
   console.log(curr.salary);
   acc += curr.salary;
   return acc;
 }, 0);
 
-console.log(diarioTotal);
+console.log(nominaDiaria);
+
+const avgAge = employees.reduce((acc, curr) => {
+  let suma = 0;
+  console.log(acc);
+  console.log(curr.age);
+  suma += curr.age;
+  console.log(suma);
+  return acc / employees.length;
+}, 0);
